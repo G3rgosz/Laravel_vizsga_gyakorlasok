@@ -1,0 +1,18 @@
+autók
+rendszám, típus, szín, ár
+új auto, módosítás, törlés
+CUD authentikáció
+keresés szín szerint(select)
+responsive
+
+Breeze telepítés:
+	composer require laravel/breeze
+	php artisan breeze:install
+	npm install && npm run dev
+
+C:\Users\diak\Documents\szivak_gergo\laravel_gyakorlas\auto>php artisan make:controller CarController
+Controller created successfully.
+
+C:\Users\diak\Documents\szivak_gergo\laravel_gyakorlas\auto>php artisan make:model Car -m             
+Model created successfully.
+Created Migration: 2022_03_23_091949_create_cars_table
