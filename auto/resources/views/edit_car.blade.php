@@ -5,6 +5,8 @@
     <div class="col-lg-3 offset-lg-3">
         <form class="form-control" action="/update-car" method="post">
         @csrf
+        @method("PUT")
+            <input class="form-control" type="hidden" name="id" value="{{ $car->id }}">
             <label for="plate">Rendszám</label>
             <input class="form-control" type="text" name="plate" value="{{ $car->plate }}">
             <label for="brand">Márka</label>

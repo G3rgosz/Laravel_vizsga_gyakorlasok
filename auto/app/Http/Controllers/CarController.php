@@ -26,4 +26,13 @@ class CarController extends Controller
             "car"=>$car
         ]);
     }
+    public function update(Request $request){
+        $car = Car::find($request->id);
+        $car->update($request->all());
+        return redirect('/');
+    }
+    public function delete($id){
+        Car::destroy($id);
+        return redirect('/');
+    }
 }
