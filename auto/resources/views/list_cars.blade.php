@@ -1,28 +1,28 @@
 @extends("layouts.master")
 
 @section("content")
-<div class="container">
+<div class="container mt-2">
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <form action="">
-                <select name="color" id="">
+                <select class="form-select" name="color" id="">
                     <option selected>Szín</option>
                     <option>Kék</option>
                     <option>Sárga</option>
                     <option>Piros</option>
                 </select>
-                <button class="btn btn-outline-info" type="submit">Keresés</button>
+                <button class="btn btn-outline-info mt-2" type="submit">Keresés</button>
             </form>
         </div>
-        <div class="col-6">
-            <a href="/register">Regisztráció</a>
-            <a href="/login">Bejelentkés</a>
-            <a href="/logout">Kijelentkezés</a>
+        <div class="col-8">
+            <a class="btn btn-outline-warning mb-1" href="/register">Regisztráció</a>
+            <a class="btn btn-outline-warning mb-1" href="/login">Bejelentkés</a>
+            <a class="btn btn-outline-danger mb-1" href="/logout">Kijelentkezés</a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-8">
-            <table class="table table-stripped">
+    <div class="row mt-2">
+        <div class="col-lg-10 col-md-10 col-sm-12">
+            <table class="table table-striped">
                 <thead>
                     <th scope="col">Id</th>
                     <th scope="col">Rendszám</th>
@@ -48,7 +48,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-2 col-sm-12">
             <a class="btn btn-outline-primary" href="/new-car">Új autó</a>
         </div>
     </div>
