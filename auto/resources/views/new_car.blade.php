@@ -2,7 +2,7 @@
 
 @section("content")
 <div class="row justify-content-center">
-    <div class="col-xl-3 col-lg-4 col-dm-5 col-sm-6 ">
+    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 ">
         <form class="form-control mt-3 p-3" action="/store-car" method="post">
         @csrf
             <label for="plate">Rendszám</label>
