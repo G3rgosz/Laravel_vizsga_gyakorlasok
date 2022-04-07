@@ -15,13 +15,16 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 */
 Route::middleware("auth")->group(function(){
     Route::get('new', [DrinkController::class, "create"]);
+    Route::get('edit/{id}', [DrinkController::class, "edit"]);
     Route::get('delete/{id}', [DrinkController::class, "delete"]);
+    Route::post('store',[DrinkController::class, "store"]);
+    Route::put('update',[DrinkController::class, "update"]);
 });
 
 Route::get('/', [DrinkController::class, "index"]);
-Route::get('/logout', [AuthenticatedSessionController::class, "destroy"]);
-Route::post('store',[DrinkController::class, "store"]);
+Route::get("search",[DrinkController::class,"search"]);
 
+Route::get('/logout', [AuthenticatedSessionController::class, "destroy"]);
 
 
 Route::get('/dashboard', function () {

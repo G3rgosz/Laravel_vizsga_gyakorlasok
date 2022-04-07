@@ -20,8 +20,25 @@ class DrinkController extends Controller
         Drink::create($request->all());
         return redirect('/');
     }
+    public function edit($id){
+        $drink = Drink::find($id);
+        return view("edit_drink",[
+            "drink" => $drink
+        ]);
+    }
+    public function update(Request $request){
+        $drink = Drink::find($request->id);
+        $drink->update($request->all());
+        return redirect('/');
+    }
     public function delete($id){
         Drink::destroy($id);
         return redirect('/');
+    }
+    public function search(Request $request){
+        $drinks = Drink::where("type",$request->type)->get();
+        return view('show_drinks',[
+            "drinks" => $drinks
+        ]);
     }
 }
